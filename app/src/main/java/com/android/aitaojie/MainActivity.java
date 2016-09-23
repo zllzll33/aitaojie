@@ -204,7 +204,6 @@ public class MainActivity extends ZBaseActivity {
                         ChatModel chatModel = chatList.get(i);
                         chatList.remove(i);
                         chatList.add(0, chatModel);
-
                     }
                 }
                 updateUnReadNum();
