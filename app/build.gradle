@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.android.aitaojie"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.jakewharton:butterknife:6.1.0'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
+    compile files('src/main/jniLibs/alipaySingle-20160516.jar')
+    compile files('src/main/jniLibs/GetuiExt-2.0.3.jar')
+    compile files('src/main/jniLibs/GetuiSDK2.8.1.0.jar')
+    compile files('src/main/jniLibs/libammsdk.jar')
+    compile files('src/main/jniLibs/mta-sdk-1.6.2.jar')
+    compile files('src/main/jniLibs/open_sdk_r5756.jar')
+    compile files('src/main/jniLibs/weiboSDKCore_3.1.4.jar')
+    compile project(':zlibrary')
+    compile project(':autolayout')
+    compile project(':EaseUI')
+    compile project(':library')
+    compile project(':library_Zxing')
+    compile project(':refresh')
+    compile project(':library_PullToRefresh')
+    compile project(':library_JsBridge')
+
+}

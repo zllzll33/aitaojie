@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ImageView
+    android:id="@+id/iv"
+    android:layout_width="240px"
+    android:padding="10px"
+    android:layout_height="240px"
+    android:scaleType="fitXY"
+    android:src="@mipmap/test"/>
+    <LinearLayout
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+     <TextView
+         android:id="@+id/des"
+         android:layout_marginTop="10dp"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="西门塔尔牛腩块500牛肉2件5件新鲜包邮"
+         android:singleLine="false"
+         android:textSize="17sp"
+         android:textColor="#757575"/>
+        <TextView
+            android:id="@+id/price"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥12.00"
+            android:textSize="@dimen/text_middle"
+            android:textColor="#434343"/>
+        <TextView
+            android:id="@+id/time"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016-07-20 15:08"
+            android:textSize="15sp"
+            android:textColor="#ADADAD"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mainColor"/>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="tabottomNormal">#b3afaf</color>
+    <color name="tabottomSelect">#333333</color>
+   <!-- <color name="mainColor">#FF8403</color>-->
+    <color name="mainColor">#F62E1F</color>
+    <color name="myColor">#f0f0f0</color>
+    <color name="DivLine">#C3C3C3</color>
+    <color name="DivBlock">#e5e5e5</color>
+    <color name="header">#ffffff</color>
+    <color name="text_black">#333333</color>
+    <color name="text_gray">#8c8c8c</color>
+    <color name="light_gray">#e0e0e0</color>
+    <color name="text_main_title">#ffffff</color>
+    <color name="text_my_text_icon">#F0F0F0</color>
+    <color name="title_line"> #e5e5e5</color>
+</resources>

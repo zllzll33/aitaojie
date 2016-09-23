@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+   >
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:id="@+id/iv"
+        android:scaleType="fitCenter"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+       android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:id="@+id/tvnum"
+            android:textSize="10sp"
+            android:text="0"
+            android:textColor="#ffffff"
+            android:layout_alignTop="@+id/iv"
+            android:gravity="center"
+            android:layout_marginTop="-2dp"
+            android:layout_marginLeft="-4dp"
+            android:layout_toRightOf="@+id/iv"
+            android:background="@drawable/shape_cart_num"/>
+<TextView
+    android:layout_centerHorizontal="true"
+    android:layout_below="@+id/iv"
+    android:id="@+id/tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="16dp"
+    android:text="tab"/>
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">爱淘街</string>
+    <string name="title_home">首页</string>
+    <string name="title_chat">对话</string>
+    <string name="title_live">逛逛</string>
+    <string name="title_my">我的</string>
+    <string name="no_more_toast">没有更多了</string>
+</resources>

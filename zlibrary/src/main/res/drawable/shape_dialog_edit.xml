@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--只设置上下边框-->
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:top="1dp" android:bottom="1dp" android:right="0dp" android:left="0dp">
+        <shape>
+            <stroke
+                android:width="1dp"
+                android:color="#f5f5f5" />
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+</layer-list>-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<stroke  android:color="#00808080" android:width="1dp" />
+    <solid android:color="@android:color/white"/>
+</shape>

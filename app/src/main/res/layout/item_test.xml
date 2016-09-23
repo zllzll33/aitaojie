@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<com.android.zlibrary.customView.ZImageView
+    android:id="@+id/iv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:src="@mipmap/test"
+/>
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:text="曲奇饼干200g/袋饼干糕点休闲食品低热量、低脂肪、低糖的休闲零食"
+        android:textColor="#494949"
+        android:textSize="20dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥18.88"
+        android:textColor="#F22E18"
+        android:textSize="15dp"/>
+        <TextView
+            android:id="@+id/good"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="曲奇饼干"
+            android:textColor="#F22E18"
+            android:textSize="15dp"/>
+    </LinearLayout>
+        </LinearLayout>
+</LinearLayout>

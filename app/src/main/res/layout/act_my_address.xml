@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<include layout="@layout/title_my"/>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.android.zlibrary.customView.ZGridView
+            android:id="@+id/grid_addr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/DivBlock"
+            android:verticalSpacing="10dp"/>
+
+    </LinearLayout>
+    </ScrollView>
+    <TextView
+        android:id="@+id/add_addr"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="新增收货地址"
+        android:textSize="@dimen/text_middle"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_big_button_text"
+        android:gravity="center"
+        android:layout_gravity="center"
+        />
+</LinearLayout>

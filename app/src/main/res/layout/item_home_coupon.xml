@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<LinearLayout
+    android:layout_marginTop="10px"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="￥"
+        android:textColor="#F22E18"/>
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40px"
+        android:text="20"
+        android:textColor="#F22E18"/>
+    <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10px"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:textSize="30px"
+            android:text="满50元使用"
+            android:textColor="@color/text_black"/>
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30px"
+            android:text="有效期：2016-07-19\n             至2016-8-19"
+            android:textColor="@color/text_gray"/>
+        </LinearLayout>
+    <TextView
+        android:id="@+id/go"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        android:text="了解详情"
+        android:textColor="#7B7B7B"
+        android:background="@drawable/shape_home_coupon_text"
+        android:layout_marginBottom="5px"/>
+    </LinearLayout>
+</LinearLayout>

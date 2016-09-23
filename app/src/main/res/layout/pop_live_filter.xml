@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center">
+        <GridView
+            android:background="@color/white"
+            android:id="@+id/grid1"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:scrollbars="none"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/comfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mainColor"
+            android:textSize="20dp"
+            android:text="确定"
+            android:background="@drawable/shape_live_filter_comfirm_text"
+            android:layout_marginBottom="5dp"/>
+</LinearLayout>

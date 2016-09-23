@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\aitaojie\aitaojie\EaseUI\assets"/><source path="D:\aitaojie\aitaojie\EaseUI\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\aitaojie\aitaojie\EaseUI\build-types\debug\assets"/></dataSet></merger>
