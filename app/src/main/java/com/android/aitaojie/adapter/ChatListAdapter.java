@@ -77,7 +77,6 @@ public class ChatListAdapter extends ZModelAdapter<ChatModel> {
             }
         });
     }
-
     @Override
     protected int layoutId() {
         return R.layout.item_chat_list;

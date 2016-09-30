@@ -80,7 +80,6 @@ public class MainActivity extends ZBaseActivity {
     protected int layoutId() {
         return R.layout.act_main;
     }
-
     @Override
     protected void Init() {
         super.Init();
@@ -161,7 +160,6 @@ public class MainActivity extends ZBaseActivity {
         broadcast_intent.putExtra("chat_list",(Serializable)chatList);
         sendBroadcast(broadcast_intent);
     }
-
     @Override
     protected void initBeforeView() {
         super.initBeforeView();
