@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="content-type">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=5.0, user-scalable=yes" />
+		<title>洛方JS</title>
+	</head>
+	<body>
+	<h3 id="WCA_SCAN_QRCODE" onclick="Scan()">扫一扫</h3>
+	<h3 id="WCA_SHOW_MESSAGE" onclick="pushMessage()">消息</h3>
+	<h3 id="WCA_OPEN_MAP" onclick="OpenLocation()">定位地图</h3>
+	<h3 id="WCA_PHONE_CALL" onclick="CallTelphone()">客服电话</h3>
+	<h3 id="WCA_SHOW_BAR" onclick="ShowTabBar()">显示导航栏</h3>
+	<h3 id="WCA_HIDE_BAR" onclick="HideTabBar()">隐藏导航栏</h3>
+	<h3 id="WCA_SHOPPING_NUM" onclick="SetCartNum()">设置购物车数量</h3>
+	<h3 id="WCA_ALI_PAY" onclick="AliPay()">支付宝</h3>
+
+	<h3 id="WCA_SHARE" onclick="Share()">分享</h3>
+	<h3 id="WCA_LOGIN" onclick="Login()">登录</h3>
+	<h3 id="WCA_LOGOUT" onclick="Logout()">登出</h3>
+	<h3 id="WCA_LOCATION" onclick="Location()">定位</h3>
+	</body>
+	<script>
+		function Location()
+	{
+	 var data = {type:"WCA_LOCATION"};
+            window.WebViewJavascriptBridge.send(
+                data
+                , function(responseData) {
+
+                }
+            );
+	}
+		function Logout()
+	{
+	 var data = {type:"WCA_LOGOUT"};
+            window.WebViewJavascriptBridge.send(
+                data
+                , function(responseData) {
+
+                }
+            );
+	}
+	function Login()
+	{
+	 var data = {type:"WCA_LOGIN",utoken:"1234567890",baichuan_id:"luofanguser696",baichuan_password:"76d33355385f5575e74bae5c09a7a9e4",m_id:"1",url:"http://www.baidu.com"};
+            window.WebViewJavascriptBridge.send(
+                data
+                , function(responseData) {
+
+                }
+            );
+	}
+		function Share()
+	{
+	 var data = {type:"WCA_SHARE",title:"风",content:"像风一样的孩子",img_url:"http://pic10.nipic.com/20101103/5063545_000227976000_2.jpg",target_url:"http://pic15.nipic.com/20110731/8022110_162804602317_2.jpg"};
+            window.WebViewJavascriptBridge.send(
+                data
+                , function(responseData) {
+
+                }
+            );
+	}
+		function AliPay()
+	{
+	 var data = {type:"WCA_ALI_PAY",id:"123456789009876551",info:"兰博基尼",fee:"0.01"};
+            window.WebViewJavascriptBridge.send(
+                data
+                , function(responseData) {
+
+                }
+            );
+	}
+		function SetCartNum()
+	{
+	 var data = {type:"WCA_SHOPPING_NUM",num:"3"};
+            window.WebViewJavascriptBridge.send(
+                data
+                , function(responseData) {
+
+                }
+            );
+	}
+	function HideTabBar()
+	{
+	 var data = {type:"WCA_HIDE_BAR"};
+            window.WebViewJavascriptBridge.send(
+                data
+                , function(responseData) {
+
+                }
+            );
+	}
+	function ShowTabBar()
+	{
+	 var data = {type:"WCA_SHOW_BAR"};
+            window.WebViewJavascriptBridge.send(
+                data
+                , function(responseData) {
+
+                }
+            );
+	}
+  function Scan()
+  {
+
+ var data = {type:"WCA_SCAN_QRCODE"};
+            window.WebViewJavascriptBridge.send(
+                data
+                , function(responseData) {
+
+                }
+            );
+  }
+  function pushMessage()
+  {
+  var data = {type:"WCA_SHOW_MESSAGE"};
+            window.WebViewJavascriptBridge.send(
+                data
+                , function(responseData) {
+
+                }
+            );
+  }
+  function OpenLocation()
+  {
+     var data = {type:"WCA_OPEN_MAP",lat:"30.348323",lng:"120.129869",store_name:"稻花香"};
+            window.WebViewJavascriptBridge.send(
+                data
+                , function(responseData) {
+
+                }
+            );
+  }
+  function CallTelphone()
+  {
+  var data = {type:"WCA_PHONE_CALL",mobile:"13412345678"};
+            window.WebViewJavascriptBridge.send(
+                data
+                , function(responseData) {
+
+                }
+            );
+  }
+  function connectWebViewJavascriptBridge(callback) {
+            if (window.WebViewJavascriptBridge) {
+                callback(WebViewJavascriptBridge)
+            } else {
+                document.addEventListener(
+                    'WebViewJavascriptBridgeReady'
+                    , function() {
+                        callback(WebViewJavascriptBridge)
+                    },
+                    false
+                );
+            }
+        }
+
+//  app 调 js
+        connectWebViewJavascriptBridge(function(bridge) {
+            bridge.init(function(message, responseCallback) {
+               var json = eval('(' + message + ')');
+                var type=json.type;
+                if(type=='ACW_NEW_MESSAGE')
+                {
+                 //app发送数据   {"type":"ACW_NEW_MESSAGE"}
+                // 显示通知栏红点
+                }
+                else if(type=='ACW_STORE_CHAT_ID')
+                {
+                //app发送数据 {"type":"ACW_STORE_CHAT_ID"}
+                //获得商户百川id
+                var chat='{chat_id:"luofangStore8",store_name:"稻花香"}';
+                 responseCallback(chat);
+                }
+                else if(type=='ACW_ALIPAY_ORDER_STATUS')
+                {
+                //支付取消  {"resultStatus":"6001","type":"ACW_ALIPAY_ORDER_STATUS","order_status":"cancle","order_info":"操作已经取消。"}
+               //支付成功   {"resultStatus":"9000","order_id":"123456789009876550","type":"ACW_ALIPAY_ORDER_STATUS","order_status":"success","order_info":""}
+               //  responseCallback("订单确认"+message);
+                }
+            });
+        })
+    </script>
+</html>
