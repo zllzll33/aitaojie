@@ -26,6 +26,7 @@ public class ZWebviewFragment extends ZBaseFragment {
     private WebActionListener   webActionListener=null;
     private String webUrl="http://h.luofangyun.com/Index/index/opentype/app/jid/4.html";
     private String w_url;
+//    webUrl="file:///android_asset/index.html";
 /*    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
