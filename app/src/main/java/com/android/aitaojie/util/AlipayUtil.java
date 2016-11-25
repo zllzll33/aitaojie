@@ -33,7 +33,7 @@ public class AlipayUtil {
     public static final String PAYMENT_TYPE = "1";
     public static final String NOTIFY_URL="http://h.luofangyun.com/Api/alipayNotify.html";
     public static String order_id="";
-    public static final String RSA_PRIVATE = "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBALpKnelQ5RLEk0E5"
+    public static final String RSA_PRIVATE_PKCS = "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBALpKnelQ5RLEk0E5"
             +"2vnrkFAi9LKnkRRMRHEBCHD0d+i7DvwJCf1jkA7nqV82iCTljnov471yIY1VNJE8"
             +"ACMNeG8804dHSKf7uoZy0STBYcavl5AFjLH3gn/nnOS6RtFrnW/XJiTCDvspfoSz"
             +"QTTuS8U0PKxMYgn4hyIdpC0txN1LAgMBAAECgYBwzaX5FabgSm/wWxwhoWZtX/1U"
@@ -87,7 +87,7 @@ public class AlipayUtil {
     public static String sign(String content ) {
         try {
             PKCS8EncodedKeySpec priPKCS8 = new PKCS8EncodedKeySpec(
-                    Base64.decode(RSA_PRIVATE,Base64.DEFAULT));
+                    Base64.decode(RSA_PRIVATE_PKCS,Base64.DEFAULT));
             KeyFactory keyf = KeyFactory.getInstance(SIGN_TYPE);
             PrivateKey priKey = keyf.generatePrivate(priPKCS8);
             java.security.Signature signature = java.security.Signature
